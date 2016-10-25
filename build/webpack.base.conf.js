@@ -63,6 +63,13 @@ module.exports = {
         loader: 'json'
       },
       {
+        test: /\.svg\?fill=/, // match only imports like `url(image.svg?fill=red)`
+        loaders: [
+          'url', // or file-loader
+          'svg-fill?selector=path,circle' // `selector` option will be used for all images processed by loader
+        ]
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {

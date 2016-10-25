@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="~assets/trollface.svg?fill=pink">
     <hello></hello>
   </div>
 </template>
